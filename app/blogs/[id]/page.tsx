@@ -53,7 +53,7 @@ const BlogPage = () => {
       .catch((error) => {
         console.error("Error fetching blog:", error);
       });
-  }, []);
+  }, [id, edit]);
 
   const handleDelete = async () => {
     try {
@@ -67,6 +67,7 @@ const BlogPage = () => {
       console.error("Error deleting blog:", error);
     } finally {
       router.push("/blogs");
+      router.refresh();
     }
   };
 
@@ -90,7 +91,6 @@ const BlogPage = () => {
       console.log(error);
     } finally {
       setEdit(false);
-      router.push(`/blogs`);
     }
   };
 
