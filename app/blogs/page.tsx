@@ -61,7 +61,9 @@ const BlogsPage = () => {
                   <p className="text-xs">{item.description}</p>
                 </CardHeader>
                 <CardFooter className="flex flex-col items-center justify-center text-xs text-muted-foreground">
-                  <p className="lowercase mb-2">owner @{item.author}</p>
+                  <p className="lowercase mb-2">
+                    owner @{item.author.split(" ").join("")}
+                  </p>
                   <p className="lowercase">click for more info</p>
                 </CardFooter>
               </Link>

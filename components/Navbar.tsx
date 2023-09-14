@@ -13,11 +13,11 @@ const Navbar = () => {
   const { data: session } = useSession();
 
   const handleloginwithgoogle = () => {
-    signIn("google", { callbackUrl: "https://blog-application-drab.vercel.app/blogs" });
+    signIn("google", { callbackUrl: "http://localhost:3000/blogs" });
   };
 
   const handleloginwithgithub = () => {
-    signIn("github", { callbackUrl: "https://blog-application-drab.vercel.app/blogs" });
+    signIn("github", { callbackUrl: "http://localhost:3000/blogs" });
   };
 
   const handlelogout = () => {
